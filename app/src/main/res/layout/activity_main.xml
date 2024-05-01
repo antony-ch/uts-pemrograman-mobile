@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#1976D2"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/editNIK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Masukkan NIK"
+                android:inputType="number"
+                android:maxLength="16" />
+
+            <EditText
+                android:id="@+id/editNamaLengkap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Masukkan Nama Lengkap"
+                android:inputType="text"
+                android:maxLength="26" />
+
+            <TextView
+                android:id="@+id/editTanggalLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Tanggal Lahir:"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:calendarViewShown="false" />
+
+            <EditText
+                android:id="@+id/editTempatLahir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Masukkan Tempat Lahir"
+                android:inputType="text"
+                android:maxLength="26" />
+
+            <TextView
+                android:id="@+id/editUsia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Usia: "
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/spinnerJenisKelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:prompt="@string/pilih_jenis_kelamin" />
+
+            <TextView
+                android:id="@+id/editKewarganegaraan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="#1976D2"
+                android:text="Kewarganegaraan"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonWNI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Warga Negara Indonesia" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonWNA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Warga Negara Asing" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/editBidangKompetensi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:background="#1976D2"
+                android:text="Bidang Kompetensi"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDevelopmentIT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Development and IT" />
+
+            <CheckBox
+                android:id="@+id/checkBoxAIServices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AI Services" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDesignCreative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Design Creative" />
+
+            <CheckBox
+                android:id="@+id/checkBoxWriting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Writing" />
+
+            <CheckBox
+                android:id="@+id/checkBoxFinanceAccounting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Finance and Accounting" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Masukkan Email"
+                android:inputType="text"
+                android:maxLength="26" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Reset"
+                android:backgroundTint="#FF5733"
+                android:onClick="onSubmitClick" />
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Submit"
+                android:backgroundTint="#50C878"
+                android:onClick="onSubmitClick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
